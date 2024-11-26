@@ -10,6 +10,9 @@ export default async function Leagues() {
     },
   });
 
+  console.log(response.text());
+  console.log(response.status);
+
   const leagues = await response.json();
 
   return (
