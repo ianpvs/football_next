@@ -11,6 +11,6 @@ export async function GET() {
     return NextResponse.json<League[]>(leagues);
   } catch (error) {
     console.error(error);
-    NextResponse.json([]);
+    return NextResponse.json([]);
   }
 }
