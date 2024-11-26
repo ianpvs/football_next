@@ -7,7 +7,7 @@ export default async function Leagues() {
     {
       method: "GET",
       next: {
-        revalidate: getRevalidateTimeInMinutes(0),
+        revalidate: getRevalidateTimeInMinutes(60),
       },
     }
   );
