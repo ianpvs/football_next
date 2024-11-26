@@ -1,8 +1,9 @@
+import { getBaseUrl } from "@/utils/baseUrl";
 import ListLeagues from "./components/list-leagues";
 import { getRevalidateTimeInMinutes } from "@/utils/revalidate";
 
 export default async function Leagues() {
-  const response = await fetch(`/api/leagues`, {
+  const response = await fetch(`${getBaseUrl()}/api/leagues`, {
     method: "GET",
     next: {
       revalidate: getRevalidateTimeInMinutes(60),
