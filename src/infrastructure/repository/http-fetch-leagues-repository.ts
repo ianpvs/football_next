@@ -34,6 +34,7 @@ export class HttpFetchLeaguesRepository implements FetchLeaguesRepository {
       headers: {
         "x-rapidapi-host": "v3.football.api-sports.io",
         "x-rapidapi-key": String(process.env.API_KEY),
+        "Content-Type": "application/json",
       },
     });
 
