@@ -7,7 +7,6 @@ export async function GET() {
     const fetchLeagues = new FetchLeaguesUseCaseFactory().make();
 
     const leagues = await fetchLeagues.execute();
-    console.log(leagues);
 
     return NextResponse.json<League[]>(leagues);
   } catch (error) {
