@@ -29,9 +29,6 @@ interface ApiCountry {
 
 export class HttpFetchLeaguesRepository implements FetchLeaguesRepository {
   async fetch(): Promise<League[]> {
-    console.log(process.env.API_URL);
-    console.log(process.env.API_KEY);
-    
     const response = await fetch(`${process.env.API_URL}/leagues`, {
       method: "GET",
       headers: {
